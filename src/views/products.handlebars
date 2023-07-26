@@ -1,0 +1,19 @@
+<ul>
+    {{#each docs}}
+        <li>
+            <h3>{{this.title}} {{this.brand}}</h3>
+            <p>{{this.description}}</p>
+            <p>${{this.price}}</p>
+            <p>stock: {{this.stock}}</p>
+            <h5 id="addCart{{this._pid}}">Agregar al carrito</h5>
+        </li>
+    {{/each}}
+    <div>
+        {{#if hasPrevPage}}
+        <a href="{{prevLink}}">Anterior</a>
+        {{/if}}
+        {{#if hasNextPage}}
+        <a href="{{nextLink}}">Siguiente</a>
+        {{/if}}
+    </div>
+</ul>
